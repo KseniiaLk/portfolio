@@ -1,0 +1,242 @@
+import React, { useState, useEffect } from "react";
+import ScreenHeading from "../../utilities/ScreenHeading/ScreenHeading";
+import ScrollService from "../../utilities/ScrollService";
+import Animations from "../../utilities/Animations";
+import "./Resume.css";
+
+const Resume = (props) => {
+  const [selectedBulletIndex, setSelectedBulletIndex] = useState(0);
+  const [carousalOffsetStyle, setCarousalOffsetStyle] = useState({});
+
+  let fadeInScreenHandler = (screen) => {
+    if (screen.fadeInScreen !== props.id) return;
+
+    Animations.animations.fadeInScreen(props.id);
+  };
+  const fadeInSubscription =
+    ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler);
+
+  const ResumeHeading = (props) => {
+    return (
+      <div className="resume-heading">
+        <div className="resume-main-heading">
+          <div className="heading-bullet"></div>
+          <span>{props.heading ? props.heading : ""}</span>
+          {props.fromDate && props.toDate ? (
+            <div className="heading-date">
+              {props.fromDate + "-" + props.toDate}
+            </div>
+          ) : (
+            <div></div>
+          )}
+        </div>
+        <div className="resume-sub-heading">
+          <span>{props.subHeading ? props.subHeading : ""}</span>
+        </div>
+        <div className="resume-heading-description">
+          <span>{props.description ? props.description : ""}</span>
+        </div>
+      </div>
+    );
+  };
+  const resumeBullets = [
+    { label: "Education" },
+    { label: "Work" },
+    { label: "Programming Skills" },
+    { label: "Projects" },
+    { label: "Interests" },
+  ];
+  const programmingSkillsDetails = [
+    { skill: "JavaScript", ratingPercentage: 90 },
+    { skill: "React JS", ratingPercentage: 80 },
+    { skill: "Vue", ratingPercentage: 80 },
+    { skill: "Express JS", ratingPercentage: 70 },
+    { skill: "Node JS", ratingPercentage: 70 },
+    { skill: "Mongo Db", ratingPercentage: 50 },
+    { skill: "TypeScript", ratingPercentage: 50 },
+    { skill: "HTML", ratingPercentage: 80 },
+    { skill: "CSS", ratingPercentage: 80 },
+    { skill: "Tailwind", ratingPercentage: 70 },
+    { skill: "CSS", ratingPercentage: 80 },
+    { skill: "SASS", ratingPercentage: 65 },
+    { skill: "SQLITE", ratingPercentage: 80 },
+    
+  ];
+
+  const projectsDetails = [
+    {
+      title: "The Battle Pass page ",
+      duration: { fromDate: "May 2023", toDate: "June 2023" },
+      description:
+        "the Battle Pass page for the Stryda website, which will be unveiled to the public soon",
+      subHeading: "Technologies Used: React JS, Typescript, Tailwind CSS.",
+    },
+    {
+      title: "E-wallet ",
+      duration: { fromDate: "January 2022", toDate: "February 2022" },
+      description:
+        "I have built a digital wallet that collects all credit cards. It allows users to view their credit cards and add new ones.",
+      subHeading:
+        "Technologies Used: Vue, CSS.",
+    },
+    {
+      title: "Dashboard ",
+      duration: { fromDate: "May 2022", toDate: "June 2022" },
+      description:
+        "A dashboard is a control panel that consists of a grid of various components, which can either display information or be interacted with.",
+      subHeading:
+        "Technologies Used: React JS, TypeScript.",
+    },
+  ];
+
+  const resumeDetails = [
+    <div className="resume-screen-container" key="education">
+      <ResumeHeading
+        heading={"IT-Högskolan"}
+        subHeading={"JavaScript Developer"}
+        fromDate={"2021"}
+        toDate={"2023"}
+      />
+
+      <ResumeHeading
+        heading={"St. Petersburg State University of Telecommunications named after prof. M.A. Bonch-Bruevich"}
+        subHeading={"Bachelor's degree, International Relations and AffairsBachelor's degree, International Relations and Affairs"}
+        fromDate={"2013"}
+        toDate={"2017"}
+      />
+    </div>,
+
+    <div className="resume-screen-container" key="work">
+      <div className="experience-container">
+        <ResumeHeading
+          heading={"Stryda"}
+          subHeading={"FRONTEND DEVELOPER INTERN"}
+          fromDate={"2023-01-10"}
+          toDate={"Present"}
+        />
+        <div className="experience-description">
+          <span className="resume-description-text">
+            Currently working on the BattlePass page.
+          </span>
+        </div>
+        <div className="experience-description">
+          <span className="resume-description-text">
+          As a frontend developer intern at Stryda, I’m a vital part of a team that’s building a platform for the company’s business insight team. 
+          Our development stack consists of React, TypeScript, Tailwind, and Figma. 
+          We aim to design an intuitive user interface with a strong focus on usability and data visualisation that’ll help streamline the team’s workflow and reduce their manual workload. 
+          We’re committed to producing high-quality code, so I’m responsible for writing efficient and scalable code, as well as conducting PR reviews on my colleagues’ code.
+          </span>
+          <br />
+        </div>
+      </div>
+    </div>,
+
+    <div
+      className="resume-screen-container programming-skills-container"
+      key="programming"
+    >
+      {programmingSkillsDetails.map((skill, index) => (
+        <div className="skill-parent" key={index}>
+          <div className="heading-bullet"></div>
+          <span>{skill.skill}</span>
+          <div className="skill-percentage">
+            <div
+              style={{ width: skill.ratingPercentage + "%" }}
+              className="active-percentage-bar"
+            ></div>
+          </div>
+        </div>
+      ))}
+    </div>,
+
+    <div className="resume-screen-container" key="projects">
+      {projectsDetails.map((projectsDetails, index) => (
+        <ResumeHeading
+          key={index}
+          heading={projectsDetails.title}
+          subHeading={projectsDetails.subHeading}
+          description={projectsDetails.description}
+          fromDate={projectsDetails.duration.fromDate}
+          toDate={projectsDetails.duration.toDate}
+        />
+      ))}
+    </div>,
+
+
+    <div className="resume-screen-container" key="interests">
+      <ResumeHeading
+        heading="Dancing"
+        description="Dance is not just a hobby but a true passion of mine, and I find immense joy and fulfillment in expressing myself through movement. Among the diverse dance styles that I love, jazz funk, contemporary, and hip-hop hold a special place in my heart."
+      />
+      <ResumeHeading
+        heading="Music"
+        description="I have a deep passion for music and find joy in listening to various genres and styles."
+      />
+    </div>,
+  ];
+
+  const handleCarousal = (index) => {
+    let offsetHeight = 360;
+
+    let newCarousalOffset = {
+      style: { transform: "translateY(" + index * offsetHeight * -1 + "px)" },
+    };
+
+    setCarousalOffsetStyle(newCarousalOffset);
+    setSelectedBulletIndex(index);
+  };
+
+  const getBullets = () => {
+    return resumeBullets.map((bullet, index) => (
+      <div
+        onClick={() => handleCarousal(index)}
+        className={
+          index === selectedBulletIndex ? "bullet selected-bullet" : "bullet"
+        }
+        key={index}
+      >
+        <span className="bullet-label">{bullet.label}</span>
+      </div>
+    ));
+  };
+
+  const getResumeScreens = () => {
+    return (
+      <div
+        style={carousalOffsetStyle.style}
+        className="resume-details-carousal"
+      >
+        {resumeDetails.map((ResumeDetail) => ResumeDetail)}
+      </div>
+    );
+  };
+
+  useEffect(() => {
+    return () => {
+      fadeInSubscription.unsubscribe();
+    };
+  }, [fadeInSubscription]);
+
+  return (
+    <div
+      className="resume-container screen-container fade-in"
+      id={props.id || ""}
+    >
+      <div className="resume-content">
+        <ScreenHeading title={"Resume"} subHeading={""} />
+        <div className="resume-card">
+          <div className="resume-bullets">
+            <div className="bullet-container">
+              <div className="bullet-icons"></div>
+              <div className="bullets">{getBullets()}</div>
+            </div>
+          </div>
+
+          <div className="resume-bullet-details">{getResumeScreens()}</div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Resume;
