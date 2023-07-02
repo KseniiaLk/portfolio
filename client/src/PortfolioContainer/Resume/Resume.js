@@ -56,8 +56,8 @@ const Resume = (props) => {
     { skill: "TypeScript", ratingPercentage: 50 },
     { skill: "HTML", ratingPercentage: 80 },
     { skill: "CSS", ratingPercentage: 80 },
-    { skill: "Tailwind", ratingPercentage: 70 },
-    { skill: "CSS", ratingPercentage: 80 },
+    { skill: "Tailwind CSS", ratingPercentage: 70 },
+    { skill: "Bootstrap", ratingPercentage: 80 },
     { skill: "SASS", ratingPercentage: 65 },
     { skill: "SQLITE", ratingPercentage: 80 },
     
@@ -116,18 +116,29 @@ const Resume = (props) => {
         />
         <div className="experience-description">
           <span className="resume-description-text">
-            Currently working on the BattlePass page.
-          </span>
-        </div>
-        <div className="experience-description">
-          <span className="resume-description-text">
           As a frontend developer intern at Stryda, I’m a vital part of a team that’s building a platform for the company’s business insight team. 
           Our development stack consists of React, TypeScript, Tailwind, and Figma. 
           We aim to design an intuitive user interface with a strong focus on usability and data visualisation that’ll help streamline the team’s workflow and reduce their manual workload. 
-          We’re committed to producing high-quality code, so I’m responsible for writing efficient and scalable code, as well as conducting PR reviews on my colleagues’ code.
           </span>
           <br />
         </div>
+      </div>
+      <div className="resume-screen-container" key="work">
+      <div className="experience-container">
+        <ResumeHeading
+          heading={"Nilo Collaborations"}
+          subHeading={"FRONTEND DEVELOPER INTERN"}
+          fromDate={"2022-08-02"}
+          toDate={"2022-10-20"}
+        />
+        <div className="experience-description">
+          <span className="resume-description-text">
+          I have had the privilege of working on the design (in Figma) and development of the frontend part with React components for Nilo, a cutting-edge digital management consultant and facilitation tool.
+           Nilo is meticulously crafted to empower individuals and teams in making informed decisions swiftly, ensuring that the right choices are made with efficiency and accuracy. 
+          </span>
+          <br />
+        </div>
+      </div>
       </div>
     </div>,
 

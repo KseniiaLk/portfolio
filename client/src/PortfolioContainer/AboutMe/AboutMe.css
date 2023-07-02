@@ -12,7 +12,6 @@
   .about-me-card {
     display: flex;
     width: 100%;
-    box-shadow: 0 0px 20px -2px #1f2235;
   }
   .about-me-profile {
     width: 50%;
@@ -34,20 +33,22 @@
   }
   .highlght-heading {
     font-family: "Poppins Bold";
-    font-size: 14px;
+    font-size: 18px;
     margin: 0 0 5px 0;
   }
   .highlight {
     display: flex;
     align-items: center;
     margin: 5px 0;
+    font-family: "Poppins Bold";
     font-size: 12px;
+
   }
   .highlight-blob {
     height: 12px;
     width: 12px;
     margin: 0 10px 0 0;
-    background-color: #a5796b;
+    background-color: #333333;
     border-radius: 50%;
   }
   .about-me-options .highlighted-btn {
@@ -77,6 +78,6 @@
     }
     .about-me-options button {
       width: 100%;
-      color: #ff5823;
+      color:#333333;
     }
   }

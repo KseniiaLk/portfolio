@@ -1,0 +1,56 @@
+.project-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .project-inner {
+    border: 2px solid #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .project-inner:hover {
+    transform: translateY(-5px);
+  }
+  
+  .project-content {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .project-image {
+    width: 60%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  .project-title {
+    font-size: 16px;
+    font-family: "Poppins SemiBold";
+    margin-bottom: 10px;
+  }
+  
+  .project-description {
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+  
+  .github-link {
+    display: inline-block;
+    background-color: #0d0d0d;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+  
+  .github-link:hover {
+    background-color: #d8e0e8;
+  }
+  

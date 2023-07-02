@@ -1,6 +1,6 @@
 import React from "react";
-import Typical from "react-typical";
 import "./Profile.css";
+
 
 export default function Profile() {
   return (
@@ -28,25 +28,13 @@ export default function Profile() {
           </div>
           <div className="profile-details-role">
             <span className="primary-text">
-              <h2>
-                <Typical
-                  loop={Infinity}
-                  steps={[
-                    "Frontend Developer",
-                    1000,
-                    "Junior Developer💻",
-                    1000,
-                    "React, Vue, Typescript💭",
-                    1000,
-                  ]}
-                />
-              </h2>
-              <span className="profile-role-tagline">
+              <h3 className="profile-role-tagline">
                 I am a curious and enthusiastic junior JavaScript developer from
                 Stockholm.
-              </span>
+              </h3>
             </span>
           </div>
+
           <div className="profile-options">
             <a href="KseniiaLk.pdf" download="KseniiaLk.pdf">
               <button className="btn highlighted-btn">Get CV</button>
