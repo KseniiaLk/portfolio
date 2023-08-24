@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import ScreenHeading from "../../utilities/ScreenHeading/ScreenHeading";
 import ScrollService from "../../utilities/ScrollService";
 import Animations from "../../utilities/Animations";
@@ -19,10 +20,10 @@ export default function AboutMe(props) {
         "HTML and CSS",
         "Native JavaScript",
         "UX & UI design",
-        "Javascript with framework (Vue)",
+        "Javascript with framework (Vue.js)",
         "Agil development",
         "Backendprogramming and databases", 
-        "Cross.platform-development,", 
+        "Cross.platform-development (React)", 
         "Software life cycle management", 
         "Testning & TypeScript",
       ],

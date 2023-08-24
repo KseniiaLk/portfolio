@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from "react";
 import ProjectItem from "./ProjectItem";
 import OwlCarousel from "react-owl-carousel";
@@ -10,9 +11,9 @@ import "./Projects.css";
 import Dashboard from "../img/Projects/Dashboard.png";
 import EWallet from "../img/Projects/EWallet.png";
 import IngeBra from "../img/Projects/IngeBra.png";
-import StarWars from "../img/Projects/StarWars.png";
 import Sinus from "../img/Projects/Sinus.png";
 import BattlePass from "../img/Projects/BattlePass.png";
+import Nilo from "../img/Projects/Nilo.png";
 import shape from "../img/Projects/shape-bg.png";
 
 export default function Projects(props) {
@@ -61,6 +62,18 @@ export default function Projects(props) {
             >
               <div className="col-lg-12">
                   <div className="project-info">
+                    <img src={BattlePass} alt=""></img>
+                    <h5>BattlePass</h5>
+                  </div>
+                  </div>
+                  <div className="col-lg-12">
+                  <div className="project-info">
+                    <img src={Nilo} alt=""></img>
+                    <h5>Nilo</h5>
+                  </div>
+                  </div>
+              <div className="col-lg-12">
+                  <div className="project-info">
                     <img src={EWallet} alt=""></img>
                     <h5>E-wallet</h5>
                 </div>
@@ -79,20 +92,8 @@ export default function Projects(props) {
                 </div>
               <div className="col-lg-12">
                   <div className="project-info">
-                    <img src={StarWars} alt=""></img>
-                    <h5>Star Wars</h5>
-                  </div>
-                </div>
-              <div className="col-lg-12">
-                  <div className="project-info">
                     <img src={Sinus} alt=""></img>
                     <h5>Sinus</h5>
-                  </div>
-                </div>
-              <div className="col-lg-12">
-                  <div className="project-info">
-                    <img src={BattlePass} alt=""></img>
-                    <h5>BattlePass</h5>
                   </div>
               </div>
             </OwlCarousel>
@@ -103,11 +104,17 @@ export default function Projects(props) {
         <img src={shape} alt="" />
       </div>
       <div>
-          <ProjectItem
-              imageSrc={EWallet}
-              title="E-wallet"
-              description="The E-wallet App is a single page application, built in Vue.js and has different views."
-              githubLink="https://github.com/KseniiaLk/e-wallet"
+            <ProjectItem
+              imageSrc={BattlePass}
+              title="BattlePass"
+              description="The Battle Pass page for the Stryda website, which will be unveiled to the public soon. React,TypeScript,Tailwind CSS."
+              liveLink="https://play.stryda.gg/home"
+            />
+             <ProjectItem
+              imageSrc={Nilo}
+              title="Nilo"
+              description="At Nilo Collab, I have been engaged in ongoing JavaScript (React) development. "
+              liveLink="https://www.nilocollab.com/"
             />
             <ProjectItem
               imageSrc={IngeBra}
@@ -120,25 +127,22 @@ export default function Projects(props) {
               title="Dashboard"
               description="ITHS Dashboard is a Progressive Web App (PWA) built in React, TypeScript."
               githubLink="https://github.com/KseniiaLk/cpu-dashbord"
+              liveLink="https://iths-db.netlify.app/"
             />
-            <ProjectItem
-              imageSrc={StarWars}
-              title="Star Wars"
-              description="A single page application that lists all the characters and their personal details from the Star Wars movies. Created using the Star Wars API, written in HTML, CSS, and Native JavaScript."
-              githubLink="https://github.com/KseniiaLk/Slutprojekt-Javascript"
+              <ProjectItem
+              imageSrc={EWallet}
+              title="E-wallet"
+              description="The E-wallet App is a single page application, built in Vue.js and has different views."
+              githubLink="https://github.com/KseniiaLk/e-wallet"
+              liveLink="https://e-wallet-try.netlify.app/"
             />
             <ProjectItem
               imageSrc={Sinus}
               title="Sinus"
               description="SINUS Webshop is an online store that sells skateboards and accessories (Figma design)."
               githubLink="https://www.figma.com/file/JwcsZtG4RAPKFNFOF9s12V/slut-projekt?node-id=2%3A2&mode=dev"
-            />
-            <ProjectItem
-              imageSrc={BattlePass}
-              title="BattlePass"
-              description="The BattlePass page, produced for Stryda. Created using React, TypeScript, and Tailwind CSS."
-              githubLink="https://play.stryda.gg/home"
-            />
+              liveLink="https://www.figma.com/proto/JwcsZtG4RAPKFNFOF9s12V/slut-projekt?type=design&node-id=206-6229&t=CoDSENKkV7SfXK0b-1&scaling=contain&page-id=2%3A2&starting-point-node-id=206%3A6197&show-proto-sidebar=1&mode=design"
+             />
       </div>
     </div>
 

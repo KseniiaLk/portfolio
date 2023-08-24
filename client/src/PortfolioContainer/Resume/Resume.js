@@ -68,16 +68,16 @@ const Resume = (props) => {
       title: "The Battle Pass page ",
       duration: { fromDate: "May 2023", toDate: "June 2023" },
       description:
-        "the Battle Pass page for the Stryda website, which will be unveiled to the public soon",
+        "During my time at Stryda and my thesis work on the BattlePass page, I have deepened my knowledge in React and TypeScript, learning to use these tools to build advanced web applications.Tailwind CSS has been an indispensable part of my work. With the help of this framework, I have been able to create sleek and responsive user interfaces with ease.",
       subHeading: "Technologies Used: React JS, Typescript, Tailwind CSS.",
     },
     {
-      title: "E-wallet ",
-      duration: { fromDate: "January 2022", toDate: "February 2022" },
+      title: "Nilo Collab ",
+      duration: { fromDate: "August 2022", toDate: "October 2022" },
       description:
-        "I have built a digital wallet that collects all credit cards. It allows users to view their credit cards and add new ones.",
+        "At Nilo Collab, I have been engaged in ongoing JavaScript (React) development. This work has been quite extensive, with a significant portion dedicated to designing in Figma and implementing the design by writing code in Visual Studio Code. Additionally, my tasks have involved making code changes to various components, applying style modifications, and implementing new features.",
       subHeading:
-        "Technologies Used: Vue, CSS.",
+        "Technologies Used: Figma, React JS.",
     },
     {
       title: "Dashboard ",

@@ -40,17 +40,41 @@
   }
   
   .github-link {
-    display: inline-block;
-    background-color: #0d0d0d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:  rgb(118, 112, 112);
     color: #fff;
     padding: 8px 16px;
-    border-radius: 5px;
+    border-radius: 30px;
     text-decoration: none;
     font-weight: bold;
     transition: background-color 0.3s;
+    font-family: "Poppins SemiBold";
+    cursor: pointer;
   }
   
   .github-link:hover {
     background-color: #d8e0e8;
   }
   
+  .project-links {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .project-link {
+    color:white;
+    text-decoration: none;
+    border: 1px solid #ffffff;
+    background-color:  rgb(118, 112, 112);
+    border-radius: 30px;
+    font-family: "Poppins SemiBold";
+    cursor: pointer;
+    padding: 8px 16px;
+    transition: background-color 0.3s;
+  }
+  
+  .project-link:hover {
+    background-color: #d8e0e8;
+  }
