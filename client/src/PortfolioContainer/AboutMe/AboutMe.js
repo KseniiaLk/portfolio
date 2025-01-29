@@ -14,7 +14,7 @@ export default function AboutMe(props) {
 
   const SCREEN_CONSTSANTS = {
     description:
-      "As a junior JavaScript developer with two years of dedicated study and valuable internship experience at Nilo Collab and Stryda, I am excited to share my passion for learning, technology, and project participation. I am constantly seeking opportunities to enhance my skills and contribute to innovative projects.",
+      "As a junior Fullstack developer with several years of dedicated study and valuable internship experience at Nilo Collab and Stryda, I am excited to share my passion for learning, technology, and project participation. I am constantly seeking opportunities to enhance my skills and contribute to innovative projects.",
     highlights: {
       bullets: [
         "HTML and CSS",
@@ -23,9 +23,9 @@ export default function AboutMe(props) {
         "Javascript with framework (Vue.js)",
         "Agil development",
         "Backendprogramming and databases", 
-        "Cross.platform-development (React)", 
-        "Software life cycle management", 
+        "Cross.platform-development (React)",  
         "Testning & TypeScript",
+        "C# and Database systems",
       ],
       heading: "Courses:",
     },

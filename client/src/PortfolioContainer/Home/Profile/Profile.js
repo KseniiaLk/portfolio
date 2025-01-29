@@ -15,9 +15,6 @@ export default function Profile() {
               <a href="https://github.com/KseniiaLk">
                 <i className=" fa fa-github-square"></i>
               </a>
-              <a href="https://instagram.com/kseny_lk?igshid=MTIyMzRjYmRlZg==">
-                <i className=" fa fa-instagram"></i>
-              </a>
             </div>
           </div>
           <div className="profile-details-name">
